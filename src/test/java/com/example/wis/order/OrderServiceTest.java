@@ -1,25 +1,33 @@
 package com.example.wis.order;
 
-import com.example.wis.MemberApp;
+import com.example.wis.config.AppConfig;
 import com.example.wis.member.*;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Or;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceTest {
 
-    private final MemberService memberService = new MemberServiceImpl();
-    private final OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @Test
-    void test(){
+    @DisplayName("VIP회원은 1000원을 할인받는다")
+    void test() {
         Member member = new Member(1L, "memberA", MemberGrade.VIP);
-        memberService.save(member);
+        memberService.signup(member);
 
         Order order = orderService.createOrder(member.getId(), "김영한 강의", 200000);
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(20000);
     }
 
 }

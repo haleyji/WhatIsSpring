@@ -2,7 +2,7 @@ package com.example.wis.member;
 
 public interface MemberService {
 
-    void save(Member member);
+    void signup(Member member);
 
-    Member findById(Long memberId);
+    Member getById(Long memberId);
 }

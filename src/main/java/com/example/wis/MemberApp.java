@@ -1,18 +1,24 @@
 package com.example.wis;
 
+import com.example.wis.config.AppConfig;
 import com.example.wis.member.Member;
 import com.example.wis.member.MemberGrade;
 import com.example.wis.member.MemberService;
-import com.example.wis.member.MemberServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        Member memberA = new Member(1L, "memberA", MemberGrade.VIP);
-        memberService.save(memberA);
+//        MemberService memberService = new AppConfig().memberService();
+        ApplicationContext applicationContext =
+                new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Member findMember = memberService.findById(1L);
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
+        Member memberA = new Member(1L, "memberA", MemberGrade.VIP);
+        memberService.signup(memberA);
+
+        Member findMember = memberService.getById(1L);
         System.out.println("new member=" + memberA.getName());
         System.out.println("find member=" + findMember.getName());
     }
