@@ -1,6 +1,6 @@
 package com.example.wis.order;
 
-import com.example.wis.config.AppConfig;
+import com.example.wis.AppConfig;
 import com.example.wis.member.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

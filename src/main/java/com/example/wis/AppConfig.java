@@ -1,4 +1,4 @@
-package com.example.wis.config;
+package com.example.wis;
 
 import com.example.wis.discount.DiscountPolicy;
 import com.example.wis.discount.FixDiscountPolicy;
@@ -12,7 +12,7 @@ import com.example.wis.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class AppConfig {
 
     @Bean

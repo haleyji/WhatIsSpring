@@ -1,6 +1,5 @@
 package com.example.wis;
 
-import com.example.wis.config.AppConfig;
 import com.example.wis.member.*;
 import com.example.wis.order.Order;
 import com.example.wis.order.OrderService;

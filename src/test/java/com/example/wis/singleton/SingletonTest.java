@@ -1,11 +1,9 @@
 package com.example.wis.singleton;
 
-import com.example.wis.config.AppConfig;
-import com.example.wis.member.Member;
+import com.example.wis.AppConfig;
 import com.example.wis.member.MemberRepository;
 import com.example.wis.member.MemberService;
 import com.example.wis.member.MemberServiceImpl;
-import com.example.wis.order.OrderService;
 import com.example.wis.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -72,7 +70,7 @@ public class SingletonTest {
 
         AppConfig bean = ac.getBean(AppConfig.class);
         System.out.println("bean=" + bean.getClass());
-        //bean=class com.example.wis.config.AppConfig$$EnhancerBySpringCGLIB$$51070853
+        //bean=class com.example.wis.AppConfig$$EnhancerBySpringCGLIB$$51070853
         //CGLIB 이라는 AppConfig 를 상속받는 Spring 이 만든 클래스를 스프링 빈으로 등록 -> singleton 이 보장되도록..
 
         /**

@@ -1,6 +1,5 @@
 package com.example.wis.beanfind;
 
-import com.example.wis.config.AppConfig;
 import com.example.wis.discount.DiscountPolicy;
 import com.example.wis.discount.FixDiscountPolicy;
 import com.example.wis.discount.RateDiscountPolicy;

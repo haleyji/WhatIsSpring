@@ -1,6 +1,5 @@
 package com.example.wis;
 
-import com.example.wis.config.AppConfig;
 import com.example.wis.member.Member;
 import com.example.wis.member.MemberGrade;
 import com.example.wis.member.MemberService;

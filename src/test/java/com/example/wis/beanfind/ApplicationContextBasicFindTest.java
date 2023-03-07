@@ -1,14 +1,12 @@
 package com.example.wis.beanfind;
 
-import com.example.wis.config.AppConfig;
-import com.example.wis.member.Member;
+import com.example.wis.AppConfig;
 import com.example.wis.member.MemberService;
 import com.example.wis.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApplicationContextBasicFindTest {

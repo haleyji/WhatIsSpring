@@ -1,6 +1,6 @@
 package com.example.wis.member;
 
-import com.example.wis.config.AppConfig;
+import com.example.wis.AppConfig;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

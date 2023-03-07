@@ -1,12 +1,9 @@
 package com.example.wis.beanfind;
 
-import com.example.wis.config.AppConfig;
 import com.example.wis.discount.DiscountPolicy;
 import com.example.wis.discount.FixDiscountPolicy;
 import com.example.wis.discount.RateDiscountPolicy;
 import com.example.wis.member.MemberRepository;
-import com.example.wis.member.MemberService;
-import com.example.wis.member.MemberServiceImpl;
 import com.example.wis.member.MemoryMemberRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
